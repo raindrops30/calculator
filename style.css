@@ -1,6 +1,19 @@
 html, body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;    
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     background-color: antiquewhite;
 }
 
+.display {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.cBtn {
+    margin-top: 60px;
+    padding: 20px;
+    font-size: 30px;
+}

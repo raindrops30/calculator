@@ -1,5 +1,4 @@
-console.log("hello World!");
-
+let temp = [];
 
 function add (a, b) {
     let sum = a + b;
@@ -21,9 +20,42 @@ function divide (a, b) {
     return sum;
 }
 
+function operate (button) {
+    
+
+}
+
+function storage (button) {
+
+    if (button == "bEquals")
+    {
+        console.log("Equals pressed");
+        //send to operate() function if equals is pressed
+        //otherwise keep pushing!
+    }
+
+    temp.push(button);
+    console.log(temp);
+}
+
+function updateDisplay () {
+    let btn = document.querySelectorAll('button');
+    btn.forEach((btn) =>
+    btn.addEventListener("click", () => {
+        if (btn.id) {
+            storage(btn.id);
+            display.textContent = btn.id;
+        }
+    })
+    );
+}
 
 
-console.log(add(5, 10));
-console.log(subtract(100, 10));
-console.log(multiply(4, 5));
-console.log(divide(30, 5));
+
+let btn0 = document.getElementById('b0');
+let btn1 = document.getElementById('b1');
+let btn2 = document.getElementById('b2');
+let display = document.getElementById('digitDisplay');
+
+
+updateDisplay();
